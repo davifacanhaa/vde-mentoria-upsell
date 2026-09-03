@@ -22,6 +22,12 @@ export const VTURB_ACCOUNT_ID = "";
 //
 // Sem ID e sem snippet, a página mostra o placeholder de vídeo.
 
+// ---------------------------------------------------------------------------
+// PREÇO (torre de preço do card). Vale para todas as matérias; para variar em
+// uma, adicione `preco: { de: "...", parcelas: 12, parcela: "..." }` na matéria.
+// ---------------------------------------------------------------------------
+export const PRECO = { de: "2.997", parcelas: 12, parcela: "149,71" };
+
 export const MATERIAS = [
   {
     slug: "penal",
@@ -36,7 +42,7 @@ export const MATERIAS = [
     slug: "administrativo",
     materia: "Direito Administrativo",
     curta: "Administrativo",
-    vagas: 5,
+    vagas: 10,
     // Único link sem parâmetro `off=` (cai na oferta padrão do produto). Confirmar com o Davi.
     checkoutUrl: "https://pay.hotmart.com/U107452050T?checkoutMode=10",
     vturbPlayerId: "",

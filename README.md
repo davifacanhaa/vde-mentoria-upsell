@@ -25,7 +25,7 @@ Assets em `assets/` baixados do próprio site: `logo-2fase.svg` (logo vetorial o
 | Rota | Matéria | Vagas |
 |---|---|---|
 | `/penal` | Direito Penal | 20 |
-| `/administrativo` | Direito Administrativo | 5 |
+| `/administrativo` | Direito Administrativo | 10 |
 | `/trabalho` | Direito do Trabalho | 20 |
 | `/tributario` | Direito Tributário | 10 |
 | `/constitucional` | Direito Constitucional | 20 |
@@ -53,6 +53,11 @@ A lista de links recebida estava em **ordem alfabética**, não na ordem das mat
 | `/civil` | N107451857K | Mentoria - VDE 2ª Fase Civil |
 
 Duas inconsistências nos parâmetros, mantidas como recebidas: **Administrativo** é o único sem `off=` (cai na oferta padrão do produto) e **Civil** é o único sem `checkoutMode=10`.
+
+## Preço
+
+Definido em `PRECO` no `config.mjs` e igual para todas as matérias: **de R$ 2.997 por 12x de R$ 149,71**.
+Para variar em uma matéria só, adicione `preco: { de, parcelas, parcela }` naquela entrada do `MATERIAS`.
 
 ## VSL (Vturb)
 

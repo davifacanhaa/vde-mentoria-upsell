@@ -76,7 +76,7 @@
     /* Headline: sentence case, peso 500, como no site */
     .headline { padding: 18px 0 0; text-align: center; }
     h1 {
-      font-size: clamp(22px, 3.6vw, 40px); line-height: 1.26; letter-spacing: -.01em;
+      font-size: clamp(19px, 3.6vw, 40px); line-height: 1.26; letter-spacing: -.01em;
       font-weight: 500; max-width: 33ch; margin: 0 auto; text-wrap: balance;
     }
     h1 b { font-weight: 700; }
@@ -139,10 +139,29 @@
     }
     .cta-materia img { width: 22px; height: 22px; }
     .cta-materia b { font-size: 13.5px; font-weight: 600; }
-    .cta-box p { color: var(--text-2); font-size: 15.5px; max-width: 62ch; margin: 0 auto 12px; text-wrap: pretty; }
-    .cta-box p strong { color: var(--text); font-weight: 600; }
-    .cta-box p.warn-line { font-size: 14px; }
-    .cta-box p.warn-line strong { color: var(--from); font-weight: 600; }
+    /* Lista de entregas */
+    .cta-list {
+      list-style: none; text-align: left; max-width: 520px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 13px;
+    }
+    .cta-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: var(--text-2); }
+    .cta-list li svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--to); margin-top: 1px; }
+    .cta-list li b { color: var(--text); font-weight: 600; }
+    .cta-divider { height: 1px; background: var(--border, #e6e6e6); margin: 24px auto 20px; max-width: 520px; }
+
+    /* Torre de preço */
+    .price-tower { margin: 2px 0 4px; }
+    .price-old {
+      color: var(--text-2); font-size: 15.5px; font-weight: 500;
+      text-decoration: line-through; text-decoration-color: rgba(102,102,102,.55); text-decoration-thickness: 1.5px;
+    }
+    .price-main { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+    .price-main .parcelas { font-size: 18px; font-weight: 500; color: var(--text); }
+    .price-main .valor {
+      font-size: clamp(42px, 6.5vw, 58px); font-weight: 700; letter-spacing: -.03em; line-height: 1;
+      background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .price-main .valor small { font-size: .46em; font-weight: 600; letter-spacing: 0; margin-right: 3px; vertical-align: .55em; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       font-family: var(--font); font-weight: 600; font-size: 16px;
@@ -187,8 +206,8 @@
   <!-- HEADLINE -->
   <div class="headline">
     <div class="wrap">
-      <h1>Pela primeira vez na história, o <b>Método VDE</b> lançou <span class="grad-text">a mentoria coletiva para a <b>2ª fase da OAB.</b></span></h1>
-      <h2>Assista o vídeo e garanta uma das <strong>20 vagas</strong> enquanto ainda dá tempo.</h2>
+      <h1>Pela primeira vez na história, você pode estudar para a <b>2ª fase</b> com a <span class="grad-text">Mentoria Exclusiva do <b>Método VDE.</b></span></h1>
+      <h2>Assista ao vídeo e garanta uma das <strong>20 vagas</strong> do grupo seleto de alunos que terá contato direto e diário com os nossos professores!</h2>
     </div>
   </div>
 
@@ -221,8 +240,19 @@
           <img src="/assets/estrela.svg" alt="">
           <b>2ª fase de Direito Penal</b>
         </div>
-        <p>Apenas por esta página você garante uma das <strong>20 vagas</strong>, com acompanhamento até o dia da sua prova.</p>
-        <p class="warn-line"><strong>Atenção:</strong> a turma é reduzida de propósito. Quando as vagas acabarem, a página sai do ar.</p>
+        <ul class="cta-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span><b>Grupo no WhatsApp</b> com os professores e os outros alunos para tirar dúvidas todos os dias</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span><b>1 aula ao vivo por semana</b>, em grupo, para conversar e tirar dúvidas direto com o professor</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span><b>Análise da sua prova</b> depois do exame, para você saber exatamente como foi o seu desempenho</span></li>
+        </ul>
+        <div class="cta-divider"></div>
+        <div class="price-tower">
+          <div class="price-old">De R$ 2.997</div>
+          <div class="price-main">
+            <span class="parcelas">por 12x de</span>
+            <span class="valor"><small>R$</small>149,71</span>
+          </div>
+        </div>
         <a href="https://pay.hotmart.com/W107452136P?off=sipj6ywt&amp;checkoutMode=10" class="btn" data-checkout>Garantir minha vaga
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

@@ -2,7 +2,7 @@
 // Uso: node build.mjs
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { MATERIAS, VTURB_ACCOUNT_ID } from "./config.mjs";
+import { MATERIAS, VTURB_ACCOUNT_ID, PRECO } from "./config.mjs";
 
 const template = readFileSync(new URL("./template.html", import.meta.url), "utf8");
 
@@ -45,12 +45,16 @@ function blocoVsl(m) {
 
 for (const m of MATERIAS) {
   const vsl = blocoVsl(m);
+  const preco = { ...PRECO, ...(m.preco || {}) };
 
   const html = template
     .replaceAll("{{MATERIA}}", m.materia)
     .replaceAll("{{CURTA}}", m.curta)
     .replaceAll("{{VAGAS}}", String(m.vagas))
     .replaceAll("{{CHECKOUT_URL}}", escAttr(m.checkoutUrl))
+    .replaceAll("{{PRECO_DE}}", preco.de)
+    .replaceAll("{{PARCELAS}}", String(preco.parcelas))
+    .replaceAll("{{PRECO_PARCELA}}", preco.parcela)
     .replaceAll("{{VSL_CLASS}}", vsl.classe)
     .replaceAll("{{VSL_BLOCK}}", vsl.html)
     .replaceAll("{{SLUG}}", m.slug);
