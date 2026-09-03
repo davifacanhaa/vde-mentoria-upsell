@@ -2,12 +2,18 @@
 // Uso: node build.mjs
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { MATERIAS, VTURB_ACCOUNT_ID, PRECO } from "./config.mjs";
+import { MATERIAS, VTURB_ACCOUNT_ID, PRECO, MENTORA } from "./config.mjs";
 
 const template = readFileSync(new URL("./template.html", import.meta.url), "utf8");
 
 // URLs de checkout têm `&` (ex.: ?off=x&checkoutMode=10); escapar para HTML válido.
 const escAttr = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+
+// "A, B e C" — vírgulas entre os primeiros e "e" antes do último.
+function listarNomes(nomes) {
+  if (nomes.length === 1) return nomes[0];
+  return nomes.slice(0, -1).join(", ") + " e " + nomes[nomes.length - 1];
+}
 
 const PLACEHOLDER = `<div class="vsl-placeholder">
         <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
@@ -46,12 +52,14 @@ function blocoVsl(m) {
 for (const m of MATERIAS) {
   const vsl = blocoVsl(m);
   const preco = { ...PRECO, ...(m.preco || {}) };
+  const professores = listarNomes([MENTORA, ...(m.professores || [])]);
 
   const html = template
     .replaceAll("{{MATERIA}}", m.materia)
     .replaceAll("{{CURTA}}", m.curta)
     .replaceAll("{{VAGAS}}", String(m.vagas))
     .replaceAll("{{CHECKOUT_URL}}", escAttr(m.checkoutUrl))
+    .replaceAll("{{PROFESSORES}}", professores)
     .replaceAll("{{PRECO_DE}}", preco.de)
     .replaceAll("{{PARCELAS}}", String(preco.parcelas))
     .replaceAll("{{PRECO_PARCELA}}", preco.parcela)

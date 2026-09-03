@@ -28,9 +28,17 @@ export const VTURB_ACCOUNT_ID = "";
 // ---------------------------------------------------------------------------
 export const PRECO = { de: "2.997", parcelas: 12, parcela: "149,71" };
 
+// ---------------------------------------------------------------------------
+// PROFESSORES. Nomes conferidos nas páginas de turma de metodovde.com.br
+// (nome exibido no card, nome do arquivo da foto e @ do Instagram batem).
+// A mentora é a mesma nas seis matérias e aparece primeiro na lista.
+// ---------------------------------------------------------------------------
+export const MENTORA = "Ana Clara Fernandes";
+
 export const MATERIAS = [
   {
     slug: "penal",
+    professores: ["Bruna Sakezevski", "Victor Pontes"],
     materia: "Direito Penal",
     curta: "Penal",
     vagas: 20,
@@ -40,6 +48,7 @@ export const MATERIAS = [
   },
   {
     slug: "administrativo",
+    professores: ["Tainan Natércia"],
     materia: "Direito Administrativo",
     curta: "Administrativo",
     vagas: 10,
@@ -50,6 +59,7 @@ export const MATERIAS = [
   },
   {
     slug: "trabalho",
+    professores: ["Ana Carolina Destefani", "Renata Japiassu"],
     materia: "Direito do Trabalho",
     curta: "Trabalho",
     vagas: 20,
@@ -59,6 +69,7 @@ export const MATERIAS = [
   },
   {
     slug: "tributario",
+    professores: ["Lara Machado"],
     materia: "Direito Tributário",
     curta: "Tributário",
     vagas: 10,
@@ -68,6 +79,7 @@ export const MATERIAS = [
   },
   {
     slug: "constitucional",
+    professores: ["Líbero Filho", "Natalia Valença"],
     materia: "Direito Constitucional",
     curta: "Constitucional",
     vagas: 20,
@@ -77,6 +89,7 @@ export const MATERIAS = [
   },
   {
     slug: "civil",
+    professores: ["Eduarda Caraciolo"],
     materia: "Direito Civil",
     curta: "Civil",
     vagas: 10,

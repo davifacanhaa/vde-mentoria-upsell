@@ -54,6 +54,21 @@ A lista de links recebida estava em **ordem alfabética**, não na ordem das mat
 
 Duas inconsistências nos parâmetros, mantidas como recebidas: **Administrativo** é o único sem `off=` (cai na oferta padrão do produto) e **Civil** é o único sem `checkoutMode=10`.
 
+## Professores
+
+Em `professores` de cada matéria no `config.mjs`, com `MENTORA` (Ana Clara Fernandes) comum às seis e sempre primeira na lista. Os nomes vieram das páginas de turma de `metodovde.com.br/segundafase/turma/<slug>`, conferindo nome exibido, arquivo da foto e @ do Instagram de cada pessoa.
+
+| Matéria | Professores (além da mentora) |
+|---|---|
+| Penal | Bruna Sakezevski, Victor Pontes |
+| Administrativo | Tainan Natércia |
+| Trabalho | Ana Carolina Destefani, Renata Japiassu |
+| Tributário | Lara Machado |
+| Constitucional | Líbero Filho, Natalia Valença |
+| Civil | Eduarda Caraciolo |
+
+Civil: o site lista também Giulia Christensen no curso, mas ela **não** participa da mentoria (confirmado pelo Davi), por isso está fora.
+
 ## Preço
 
 Definido em `PRECO` no `config.mjs` e igual para todas as matérias: **de R$ 2.997 por 12x de R$ 149,71**.
