@@ -77,6 +77,13 @@ Preencher `vturbPlayerId` sem preencher `VTURB_ACCOUNT_ID` faz o build falhar co
 - [ ] IDs do Vturb (`VTURB_ACCOUNT_ID` + `vturbPlayerId` das 6 matérias)
 - [ ] Confirmar as duas inconsistências de parâmetro de checkout acima
 
+## Repositório
+
+`davifacanhaa/vde-mentoria-upsell` (**privado**, porque a oferta ainda não foi lançada).
+Para abrir ao público: `gh repo edit davifacanhaa/vde-mentoria-upsell --visibility public --accept-visibility-change-consequences`
+
+Autor dos commits: `davifacanhaa@gmail.com` (o email metodovde causa BLOCK de git-author na Vercel).
+
 ## Deploy (padrão VDE)
 
 ```
