@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mentoria Método VDE 2ª Fase · Direito do Trabalho</title>
+  <meta name="description" content="Mentoria do Método VDE para a 2ª fase da OAB em Direito do Trabalho: apenas 20 vagas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Tokens extraídos de metodovde.com.br/segundafase */
+    :root {
+      --bg: #f8f6fa;            /* bg-secondary do site */
+      --card: #ffffff;          /* bg-primary */
+      --text: #0c030c;          /* text-primary */
+      --text-2: #666666;        /* text-secondary */
+      --from: #5a009f;          /* --color-from */
+      --to: #0047aa;            /* --color-to */
+      --blue-2: #3388ff;
+      --grad: linear-gradient(to right, var(--from), var(--to));
+      --grad-blue: linear-gradient(to right, var(--blue-2), var(--to));
+      --r-3xl: 24px;
+      --font: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font); color: var(--text);
+      line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; font-weight: 400;
+      /* halos concêntricos do site, sem corte entre seções */
+      background-color: var(--bg);
+      background-image: url('/assets/fundo-gradiente.svg');
+      background-size: max(1920px, 150%) auto;
+      background-position: center -170px;
+      background-repeat: no-repeat;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ::selection { background: var(--from); color: #fff; }
+    .wrap { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* ---- Barra superior em gradiente (componente do site) ---- */
+    .marquee {
+      background: var(--grad); color: #fff; height: 44px;
+      display: flex; align-items: center; overflow: hidden;
+      white-space: nowrap; user-select: none; position: relative; z-index: 5;
+    }
+    .marquee-track { display: inline-flex; align-items: center; animation: mq 32s linear infinite; }
+    .marquee-track span {
+      display: inline-flex; align-items: center; gap: 14px; padding: 0 22px;
+      font-size: 12.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .marquee-track img { width: 15px; height: 15px; flex-shrink: 0; filter: brightness(0) invert(1); }
+    @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ---- Hero: halos concêntricos do site + marca d'água do olho ---- */
+    .hero { position: relative; overflow: hidden; padding-bottom: 8px; }
+    .hero-mark {
+      position: absolute; top: 150px; left: 50%; transform: translateX(-50%);
+      width: min(520px, 118vw); height: auto; opacity: .05;
+      pointer-events: none; z-index: 0;
+    }
+    .hero .wrap { position: relative; z-index: 2; }
+
+    /* Logo */
+    .top { padding: 34px 0 6px; text-align: center; }
+    .top img { width: min(165px, 46vw); height: auto; margin: 0 auto; }
+    @media (max-width: 560px){ .top { padding: 26px 0 4px; } }
+
+    /* Headline: sentence case, peso 500, como no site */
+    .headline { padding: 18px 0 0; text-align: center; }
+    h1 {
+      font-size: clamp(22px, 3.6vw, 40px); line-height: 1.26; letter-spacing: -.01em;
+      font-weight: 500; max-width: 33ch; margin: 0 auto; text-wrap: balance;
+    }
+    h1 b { font-weight: 700; }
+    h2 {
+      font-size: clamp(15.5px, 2.1vw, 18px); line-height: 1.6; font-weight: 400;
+      color: var(--text-2); max-width: 48ch; margin: 18px auto 0;
+    }
+    h2 strong { font-weight: 600; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* ---- VSL com anel em gradiente ---- */
+    .vsl { padding: 30px 0 0; position: relative; z-index: 2; }
+    .vsl-ring {
+      max-width: 760px; margin: 0 auto; padding: 3px; border-radius: 27px;
+      background: var(--grad); box-shadow: 0 20px 50px rgba(90, 0, 159, .16);
+    }
+    .vsl-frame {
+      border-radius: var(--r-3xl); overflow: hidden; background: #0b0a1e;
+      aspect-ratio: 16 / 9; position: relative;
+    }
+    .vsl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    /* Com player Vturb: mantém o 16/9 reservado (igual ao snippet padrão do Vturb,
+       que usa padding-top 56.25%) para o player não causar salto de layout ao carregar.
+       Se a VSL não for 16:9, trocar o aspect-ratio abaixo. */
+    .vsl-frame.is-player vturb-smartplayer {
+      position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+    }
+    .vsl-placeholder {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 15px; text-align: center; padding: 24px;
+      background: radial-gradient(ellipse at center, rgba(90,0,159,.45), #0b0a1e 76%);
+    }
+    .vsl-placeholder .play {
+      width: 70px; height: 70px; border-radius: 50%; background: #fff; color: var(--from);
+      display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .vsl-placeholder .play svg { width: 26px; height: 26px; margin-left: 4px; }
+    .vsl-placeholder p { color: rgba(255,255,255,.82); font-size: 14.5px; font-weight: 400; max-width: 36ch; }
+    .vsl-fallback { text-align: center; margin-top: 14px; }
+    .vsl-fallback a { color: var(--text-2); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+    .vsl-fallback a:hover { color: var(--from); }
+
+    /* ---- Card de CTA com aba em gradiente (componente do site) ---- */
+    .cta-sec { padding: 34px 0 72px; position: relative; }
+    .cta-shell { max-width: 760px; margin: 0 auto; }
+    .cta-tab {
+      width: min(300px, 84%); margin: 0 auto; background: var(--grad-blue); color: #fff;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: var(--r-3xl) var(--r-3xl) 0 0; padding: 9px 18px 7px;
+    }
+    .cta-tab svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .cta-tab span { font-size: 12.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+    .cta-box {
+      background: var(--card); border-radius: var(--r-3xl);
+      padding: 38px 40px 34px; text-align: center;
+      box-shadow: 0 10px 15px -3px rgba(12,3,12,.06), 0 4px 6px -4px rgba(12,3,12,.05);
+    }
+    .cta-materia {
+      display: inline-flex; align-items: center; gap: 9px; background: var(--bg);
+      border-radius: 999px; padding: 7px 16px 7px 8px; margin-bottom: 22px;
+    }
+    .cta-materia img { width: 22px; height: 22px; }
+    .cta-materia b { font-size: 13.5px; font-weight: 600; }
+    .cta-box p { color: var(--text-2); font-size: 15.5px; max-width: 62ch; margin: 0 auto 12px; text-wrap: pretty; }
+    .cta-box p strong { color: var(--text); font-weight: 600; }
+    .cta-box p.warn-line { font-size: 14px; }
+    .cta-box p.warn-line strong { color: var(--from); font-weight: 600; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: var(--font); font-weight: 600; font-size: 16px;
+      padding: 16px 40px; border-radius: 999px; border: none; cursor: pointer;
+      background: var(--grad); color: #fff; margin-top: 20px;
+      box-shadow: 0 8px 20px rgba(90, 0, 159, .22);
+      transition: transform .2s ease, opacity .2s ease;
+      text-align: center; line-height: 1.3;
+    }
+    .btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .btn:hover { transform: scale(1.04); opacity: .92; }
+    .btn:active { transform: scale(1); }
+    .cta-note { margin-top: 16px; color: var(--text-2); font-size: 12.5px; display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .cta-note svg { width: 14px; height: 14px; color: var(--to); }
+    @media (max-width: 560px){
+      .cta-box { padding: 30px 22px 28px; }
+      .btn { width: 100%; padding: 16px 20px; font-size: 15px; }
+      .cta-tab { width: min(300px, 92%); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BARRA SUPERIOR -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span><img src="/assets/estrela.svg" alt="">Vagas limitadas para a mentoria de Trabalho</span><span><img src="/assets/estrela.svg" alt="">Oferta exclusiva desta página</span><span><img src="/assets/estrela.svg" alt="">Apenas 20 vagas</span>
+    <span><img src="/assets/estrela.svg" alt="">Vagas limitadas para a mentoria de Trabalho</span><span><img src="/assets/estrela.svg" alt="">Oferta exclusiva desta página</span><span><img src="/assets/estrela.svg" alt="">Apenas 20 vagas</span>
+  </div>
+</div>
+
+<section class="hero">
+  <img class="hero-mark" src="/assets/olho-2fase.svg" alt="" aria-hidden="true">
+
+  <!-- LOGO -->
+  <div class="top">
+    <div class="wrap">
+      <img src="/assets/logo-2fase.svg" alt="Método VDE · OAB 2ª fase">
+    </div>
+  </div>
+
+  <!-- HEADLINE -->
+  <div class="headline">
+    <div class="wrap">
+      <h1>Pela primeira vez na história, o <b>Método VDE</b> lançou <span class="grad-text">a mentoria coletiva para a <b>2ª fase da OAB.</b></span></h1>
+      <h2>Assista o vídeo e garanta uma das <strong>20 vagas</strong> enquanto ainda dá tempo.</h2>
+    </div>
+  </div>
+
+  <!-- VSL -->
+  <div class="vsl">
+    <div class="wrap">
+      <div class="vsl-ring">
+        <div class="vsl-frame">
+          <div class="vsl-placeholder">
+        <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        <p>Assista ao vídeo antes de garantir a sua vaga.</p>
+      </div>
+        </div>
+      </div>
+      <div class="vsl-fallback"><a href="https://pay.hotmart.com/M107452107V?off=5qu3at55&amp;checkoutMode=10">caso o vídeo não carregue, toque aqui para garantir sua vaga</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARD DE CTA -->
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="cta-shell">
+      <div class="cta-tab">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.525 14.335 1.998 7.808v1.334c0 .353.14.693.394.94l5.193 5.193c.52.52 1.367.52 1.887 0l4.14-4.14c.52-.52.52-1.367 0-1.887z"/><path d="M7.585 11.942c.26.26.6.393.94.393s.68-.133.94-.393l4.14-4.14c.52-.52.52-1.367 0-1.887L8.412.722a1.33 1.33 0 0 0-.94-.387h-4.14c-.734 0-1.334.6-1.334 1.333v4.14c0 .354.14.694.394.94zM3.332 1.668h4.14l5.193 5.194-4.14 4.14-5.193-5.194z"/><path d="M4.832 4.002a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667"/></svg>
+        <span>Apenas 20 vagas</span>
+      </div>
+      <div class="cta-box">
+        <div class="cta-materia">
+          <img src="/assets/estrela.svg" alt="">
+          <b>2ª fase de Direito do Trabalho</b>
+        </div>
+        <p>Apenas por esta página você garante uma das <strong>20 vagas</strong>, com acompanhamento até o dia da sua prova.</p>
+        <p class="warn-line"><strong>Atenção:</strong> a turma é reduzida de propósito. Quando as vagas acabarem, a página sai do ar.</p>
+        <a href="https://pay.hotmart.com/M107452107V?off=5qu3at55&amp;checkoutMode=10" class="btn" data-checkout>Garantir minha vaga
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <div class="cta-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Compra segura · Oferta exclusiva desta página
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
