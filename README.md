@@ -56,9 +56,9 @@ Duas inconsistências nos parâmetros, mantidas como recebidas: **Administrativo
 
 ## Professores
 
-Em `professores` de cada matéria no `config.mjs`, com `MENTORA` (Ana Clara Fernandes) comum às seis e sempre primeira na lista. Os nomes vieram das páginas de turma de `metodovde.com.br/segundafase/turma/<slug>`, conferindo nome exibido, arquivo da foto e @ do Instagram de cada pessoa.
+Em `professores` de cada matéria no `config.mjs`. Os nomes vieram das páginas de turma de `metodovde.com.br/segundafase/turma/<slug>`, conferindo nome exibido, arquivo da foto e @ do Instagram de cada pessoa. **Ana Clara Fernandes não entra na lista** (é mentora do curso, e o bloco mostra só os professores da matéria).
 
-| Matéria | Professores (além da mentora) |
+| Matéria | Professores |
 |---|---|
 | Penal | Bruna Sakezevski, Victor Pontes |
 | Administrativo | Tainan Natércia |

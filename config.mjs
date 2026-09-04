@@ -29,11 +29,10 @@ export const VTURB_ACCOUNT_ID = "";
 export const PRECO = { de: "2.997", parcelas: 12, parcela: "149,71" };
 
 // ---------------------------------------------------------------------------
-// PROFESSORES. Nomes conferidos nas páginas de turma de metodovde.com.br
-// (nome exibido no card, nome do arquivo da foto e @ do Instagram batem).
-// A mentora é a mesma nas seis matérias e aparece primeiro na lista.
+// PROFESSORES por matéria (em `professores` de cada entrada abaixo). Nomes
+// conferidos nas páginas de turma de metodovde.com.br: nome exibido no card,
+// nome do arquivo da foto e @ do Instagram batem entre si.
 // ---------------------------------------------------------------------------
-export const MENTORA = "Ana Clara Fernandes";
 
 export const MATERIAS = [
   {

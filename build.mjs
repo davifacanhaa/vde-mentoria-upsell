@@ -2,7 +2,7 @@
 // Uso: node build.mjs
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { MATERIAS, VTURB_ACCOUNT_ID, PRECO, MENTORA } from "./config.mjs";
+import { MATERIAS, VTURB_ACCOUNT_ID, PRECO } from "./config.mjs";
 
 const template = readFileSync(new URL("./template.html", import.meta.url), "utf8");
 
@@ -52,7 +52,7 @@ function blocoVsl(m) {
 for (const m of MATERIAS) {
   const vsl = blocoVsl(m);
   const preco = { ...PRECO, ...(m.preco || {}) };
-  const professores = listarNomes([MENTORA, ...(m.professores || [])]);
+  const professores = listarNomes(m.professores || []);
 
   const html = template
     .replaceAll("{{MATERIA}}", m.materia)
