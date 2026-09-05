@@ -30,8 +30,17 @@ Assets em `assets/` baixados do próprio site: `logo-2fase.svg` (logo vetorial o
 | `/tributario` | Direito Tributário | 10 |
 | `/constitucional` | Direito Constitucional | 20 |
 | `/civil` | Direito Civil | 10 |
+| `/obrigado` | Página de obrigado (comum às seis) | — |
 
 Mesmos slugs das turmas do site oficial (`metodovde.com.br/segundafase/turma/<slug>`).
+
+## Página de obrigado (`/obrigado`)
+
+Uma só para as seis matérias, porque o caminho de acesso é idêntico e o link do grupo fica dentro da plataforma, não na página. Estrutura copiada de `metodovde.com.br/concursos/obrigado`: fundo em gradiente, logo branca, headline com trecho em degradê, cards com círculo de ícone e bloco de suporte.
+
+Diferenças em relação à referência: gradiente da **2ª fase** (`#5A009F → #0047AA`) no lugar do roxo de concursos, e 4 passos que refletem o fluxo real da mentoria — e-mail, entrar na plataforma, abrir o módulo **Mentorias**, clicar em **Grupo do WhatsApp**. O passo 4 mostra uma pílula imitando o botão que a pessoa vê dentro do módulo.
+
+Arquivo estático em `obrigado/index.html` (não passa pelo `build.mjs`, já que não varia por matéria). Ícones via Material Symbols Outlined, mesma fonte de ícones da referência; o do WhatsApp é SVG inline, porque Material Symbols não tem ícones de marca.
 
 ## Como editar
 
