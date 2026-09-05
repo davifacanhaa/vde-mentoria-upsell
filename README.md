@@ -38,7 +38,7 @@ Mesmos slugs das turmas do site oficial (`metodovde.com.br/segundafase/turma/<sl
 
 Uma só para as seis matérias, porque o caminho de acesso é idêntico e o link do grupo fica dentro da plataforma, não na página. Estrutura copiada de `metodovde.com.br/concursos/obrigado`: fundo em gradiente, logo branca, headline com trecho em degradê, cards com círculo de ícone e bloco de suporte.
 
-Diferenças em relação à referência: gradiente da **2ª fase** (`#5A009F → #0047AA`) no lugar do roxo de concursos, e 4 passos que refletem o fluxo real da mentoria — e-mail, entrar na plataforma, abrir o módulo **Mentorias**, clicar em **Grupo do WhatsApp**. O passo 4 mostra uma pílula imitando o botão que a pessoa vê dentro do módulo.
+Diferenças em relação à referência: usa o **fundo claro das páginas de venda** (`#F8F6FA` + halos do `fundo-gradiente.svg`) no lugar do fundo roxo em gradiente, e 4 passos que refletem o fluxo real da mentoria — e-mail, entrar na plataforma, abrir o módulo **Mentorias**, clicar em **Grupo do WhatsApp**. O passo 4 mostra uma pílula imitando o botão que a pessoa vê dentro do módulo.
 
 Nos passos 3 e 4 a página usa os **prints reais da plataforma** (`assets/print-menu-mentorias.png` e `assets/print-grupo-whatsapp.png`), recortados das capturas enviadas pelo Davi, em vez de ícones recriados: a pessoa reconhece na hora o que precisa procurar. Nos passos 1 e 2 os ícones vêm do Material Symbols Outlined, mesma fonte de ícones da referência.
 
