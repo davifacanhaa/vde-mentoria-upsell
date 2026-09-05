@@ -40,7 +40,9 @@ Uma só para as seis matérias, porque o caminho de acesso é idêntico e o link
 
 Diferenças em relação à referência: gradiente da **2ª fase** (`#5A009F → #0047AA`) no lugar do roxo de concursos, e 4 passos que refletem o fluxo real da mentoria — e-mail, entrar na plataforma, abrir o módulo **Mentorias**, clicar em **Grupo do WhatsApp**. O passo 4 mostra uma pílula imitando o botão que a pessoa vê dentro do módulo.
 
-Arquivo estático em `obrigado/index.html` (não passa pelo `build.mjs`, já que não varia por matéria). Ícones via Material Symbols Outlined, mesma fonte de ícones da referência; o do WhatsApp é SVG inline, porque Material Symbols não tem ícones de marca.
+Nos passos 3 e 4 a página usa os **prints reais da plataforma** (`assets/print-menu-mentorias.png` e `assets/print-grupo-whatsapp.png`), recortados das capturas enviadas pelo Davi, em vez de ícones recriados: a pessoa reconhece na hora o que precisa procurar. Nos passos 1 e 2 os ícones vêm do Material Symbols Outlined, mesma fonte de ícones da referência.
+
+Arquivo estático em `obrigado/index.html` (não passa pelo `build.mjs`, já que não varia por matéria).
 
 ## Como editar
 

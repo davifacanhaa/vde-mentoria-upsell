@@ -75,13 +75,13 @@
     .step h3 { font-size: 17px; font-weight: 600; line-height: 1.3; }
     .step p { font-size: 14px; color: rgba(255,255,255,.82); line-height: 1.55; }
     .step p b { color: #fff; font-weight: 600; }
-    /* pílula que imita o botão do módulo dentro da plataforma */
-    .zap-pill {
-      display: inline-flex; align-items: center; gap: 8px; margin-top: 2px;
-      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px; padding: 8px 16px; font-size: 13.5px; font-weight: 600;
+    /* print real da plataforma, sobre fundo claro como o original */
+    .shot {
+      margin-top: 4px; width: 100%; background: #fff; border-radius: 14px;
+      padding: 12px 14px; border: 1px solid rgba(255,255,255,.35);
+      box-shadow: 0 6px 18px rgba(0,0,0,.22);
     }
-    .zap-pill svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .shot img { width: 100%; height: auto; display: block; }
 
     /* Aviso do e-mail */
     .alert {
@@ -138,22 +138,16 @@
 
       <div class="step">
         <span class="step-num">03</span>
-        <div class="step-ic"><span class="material-symbols-outlined">co_present</span></div>
         <h3>Abra o módulo Mentorias</h3>
-        <p>Já dentro da plataforma, procure no menu e clique em <b>Mentorias</b>.</p>
+        <p>Já dentro da plataforma, procure no menu e clique em <b>Mentorias</b>:</p>
+        <div class="shot"><img src="/assets/print-menu-mentorias.png" alt="Menu da Plataforma VDE com a opção Mentorias entre Ao Vivo e Tempo de Estudos" loading="lazy"></div>
       </div>
 
       <div class="step">
         <span class="step-num">04</span>
-        <div class="step-ic">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.19-.24-.57-.48-.5-.66-.5l-.56-.01c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.2 3.06c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35"/><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.23-1.37a9.9 9.9 0 0 0 4.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2m0 18.02h-.01a8.3 8.3 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.27-4.4c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.28-8.3 8.28"/></svg>
-        </div>
         <h3>Entre no grupo do WhatsApp</h3>
-        <p>Dentro do módulo Mentorias, é só clicar no botão:</p>
-        <span class="zap-pill">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.23-1.37a9.9 9.9 0 0 0 4.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2m0 18.02h-.01a8.3 8.3 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.27-4.4c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.28-8.3 8.28"/><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.19-.24-.57-.48-.5-.66-.5l-.56-.01c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.47s1.06 2.87 1.2 3.06c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35"/></svg>
-          Grupo do WhatsApp
-        </span>
+        <p>Dentro do módulo Mentorias, clique em <b>Grupo do WhatsApp</b>:</p>
+        <div class="shot"><img src="/assets/print-grupo-whatsapp.png" alt="Módulo Mentorias com o botão Grupo do WhatsApp" loading="lazy"></div>
       </div>
     </div>
 
